@@ -1,0 +1,211 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: Retro;
+            src: url(Retro\ Gaming.ttf);
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #615e3b;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar a.icon {
+            display: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar a:not(:first-child) {display: none;}
+            .navbar a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar.responsive {position: relative;}
+            .navbar.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+        .slideshow-container {
+            max-width: 100%;
+            margin-top: px; 
+        }
+
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+
+        .nav-arrows {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+
+        .nav-arrows img {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 5px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-arrows img:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        section {
+            padding: 16px;
+            margin-top: 20px;  
+        }
+
+        footer {
+            background-color:  #615e3b;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            margin-top: 20px;
+        }
+
+
+    </style>
+    <title>CHRONIDICES</title>
+</head>
+<body>
+    <div class="navbar" id="myNavbar">
+        <a href="#home" style="font-family: Retro;">HOME</a>
+        <a href="produtos.html" style="font-family: Retro;">PRODUTOS</a>
+        <a href="carrinho.html" style="font-family: Retro;">CARRINHO</a>
+        <a href="usuario.html" style="font-family: Retro;">USUÁRIO</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <section>
+        <h2 style="color: #9f1804;"> 🎲 CHRONIDICES</h2>
+        <p>Bem-vindo à Chronidices, sua porta de entrada para o fascinante universo do RPG!
+            <br><br>
+            Aqui, cada prateleira é um portal que conduz a mundos inexplorados, repletos de manuais envolventes, dados de todos os tipos e miniaturas que dão vida a criaturas lendárias. </p>
+    </section>
+
+    <div class="slideshow-container">
+        <div class="nav-arrows">
+            <img src="seta_esquerda.png" alt="Anterior" onclick="plusSlides(-1)">
+            <img src="seta_direita.png" alt="Próximo" onclick="plusSlides(1)">
+        </div>
+
+        <div class="mySlides">
+            <img src="produto1.jpg" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <img src="produto2.jpg" style="width: 100%;">
+        </div>
+
+        <div class="mySlides">
+            <img src="produto3.jpg" style="width: 100%;">
+        </div>
+    </div>
+
+    <section>
+        <h2 style="color: #9f1804;"> 📲 NOS SIGA EM REDES SOCIAIS!</h2>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/chronidices/" target="_blank"><img src="insta.png" style="height: 50px;"></a>
+            <a href="#" target="_blank"><img src="X.png" style="height: 50px;"></a>
+
+        </div>
+    </section>
+
+    <footer class="footer-nav">
+        <p>&copy; 2023 Chronidices. Todos os direitos reservados.</p>
+
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            const slides = document.getElementsByClassName("mySlides");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function myFunction() {
+            var x = document.getElementById("myNavbar");
+            if (x.className === "navbar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navbar";
+            }
+        }
+    </script>
+</body>
+</html>

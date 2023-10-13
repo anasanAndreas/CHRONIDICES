@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHRONIDICES</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #615e3b;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        @font-face {
+            font-family: Retro;
+            src: url(Retro\ Gaming.ttf);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2 style="font-family: retro;">recupere seu login!</h2>
+        <p>informe o e-mail associado à sua conta. <br><br>um link de recuperação será enviado para este e-mail.</p>
+
+        <label for="email">e-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">enviar link de recuperação</button>
+        <br>
+        <a href="login.html"><img src="v.png"></a>
+    </form>
+</body>
+</html>

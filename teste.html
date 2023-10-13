@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Site Responsivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #666;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        section {
+            padding: 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Seu Site</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">Sobre</a> |
+        <a href="#">Contato</a>
+    </nav>
+
+    <section>
+        <h2>Bem-vindo ao Nosso Site!</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida, nisi ut tincidunt finibus, elit quam
+            fringilla lacus, nec malesuada risus sem vel libero.</p>
+    </section>
+
+    <footer>
+        &copy; 2023 Seu Site
+    </footer>
+
+</body>
+
+</html>
